@@ -1,7 +1,7 @@
 ## Summary
 * The accuracy of 83.96 was achieved on this file [https://github.com/gantir/eip4/blob/master/session3/assign_3.ipynb]
 * The above was achieved with 74,597 parameters of which 73,317 are trainable.
-* This same model without data augumentation resulted highest accuracy of 81.95
+* This same model without data augumentation resulted highest accuracy of 82.45
 * I tried different networks which got to lesser accuracy than this network with 98K+ parameters. In one of the trail runs I got to a network with about 65K+ parameters which could beat the seed program accuracy, but it's performance was poor to this network. However, I missed storing the model defenition and hence could not try how it's behavior would be with data augumentation.
 
 ## Details
