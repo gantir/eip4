@@ -1,5 +1,5 @@
 * Final Validation accuracy for Base Network
-  * Accuracy on test data is: 82.65
+  * Accuracy on test data is: 83.60
 * Your model definition (model.add... ) with output channel size and receptive field
 * Your 50 epoch logs
   * Epoch 1/50
