@@ -142,4 +142,5 @@ my_model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['ac
 781/781 [==============================] - 47s 60ms/step - loss: 0.4870 - acc: 0.8300 - val_loss: 0.4774 - val_acc: 0.8366
   * Epoch 50/50
 781/781 [==============================] - 47s 60ms/step - loss: 0.4842 - acc: 0.8315 - val_loss: 0.4692 - val_acc: 0.8360
+
 Model took 2327.07 seconds to train
