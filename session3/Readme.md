@@ -1,6 +1,46 @@
 * Final Validation accuracy for Base Network
   * Accuracy on test data is: 83.60
 * Your model definition (model.add... ) with output channel size and receptive field
+```
+my_model = Sequential()
+
+my_model.add(SeparableConvolution2D(64, 3, 3, border_mode='same', input_shape=(32, 32, 3), activation='relu')) # 32*32*64, rf: 3
+my_model.add(BatchNormalization())
+my_model.add(Dropout(0.1))
+
+my_model.add(SeparableConvolution2D(64, 3, 3, border_mode='valid', activation='relu')) # 30*30*64, rf: 5
+my_model.add(BatchNormalization())
+my_model.add(Dropout(0.1))
+
+my_model.add(MaxPooling2D(pool_size=(2, 2))) # 15*15*64, rf: 9
+my_model.add(Dropout(0.1))
+
+my_model.add(SeparableConvolution2D(128, 3, 3, border_mode='same', activation='relu')) # 15*15*128, rf: 13
+my_model.add(BatchNormalization())
+my_model.add(Dropout(0.1))
+
+my_model.add(SeparableConvolution2D(128, 3, 3, border_mode='valid', activation='relu')) # 13*13*128 rf: 17
+my_model.add(BatchNormalization())
+my_model.add(Dropout(0.1))
+
+my_model.add(MaxPooling2D(pool_size=(2, 2))) # 6*6*128 rf: 25
+my_model.add(Dropout(0.1))
+
+my_model.add(SeparableConvolution2D(128, 3, 3, border_mode='same', activation='relu')) # 6*6*128 rf: 33
+my_model.add(BatchNormalization())
+my_model.add(Dropout(0.1))
+
+my_model.add(SeparableConvolution2D(128, 3, 3, border_mode='valid', activation='relu')) # 4*4*128 rf: 41
+my_model.add(BatchNormalization())
+my_model.add(Dropout(0.1))
+
+my_model.add(AveragePooling2D()) # 2*2*128 rf: ? 
+my_model.add(Flatten()) # 512, rf: ?
+my_model.add(Dense(num_classes, activation='softmax'))
+
+# Compile the model
+my_model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+```
 * Your 50 epoch logs
   * Epoch 1/50
 390/390 [==============================] - 57s 147ms/step - loss: 1.4305 - acc: 0.4871 - val_loss: 1.2815 - val_acc: 0.5589
