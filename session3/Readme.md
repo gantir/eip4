@@ -1,6 +1,6 @@
 ## Summary
 * The accuracy of 85.97 was achieved on this file [https://github.com/gantir/eip4/blob/master/session3/assign_3_submission.ipynb] with 99,445 params of which 98K are trainable. The final accuracy was 85.86. The difference with this model was this had variable learning rate
-* The accuracy of 84.29 was achieved on this file [https://github.com/gantir/eip4/blob/master/session3/assign_3_submission.ipynb] with 73,957 params of which 72,677 are trainable. The final accuracy was 83.84
+* The accuracy of 84.29 was achieved on this file [https://github.com/gantir/eip4/blob/9841f3a6f54402b47fe52681274259faaadefd71/session3/assign_3.ipynb] with 73,957 params of which 72,677 are trainable. The final accuracy was 83.84
 * I tried different networks which got to lesser accuracy than this network with 98K+ parameters. In one of the trail runs I got to a network with about 65K+ parameters which could beat the seed program accuracy, but it's performance was poor to this network. However, I missed storing the model defenition and hence could not try how it's behavior would be with data augumentation.
 
 ## Details
