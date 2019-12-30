@@ -12,5 +12,5 @@
 
 
 Reference:
-https://github.com/titu1994/keras-one-cycle
-https://github.com/bckenstler/CLR
+- https://github.com/titu1994/keras-one-cycle
+- https://github.com/bckenstler/CLR
